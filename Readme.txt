@@ -1,0 +1,1 @@
+This is the project for the course CS 6400 at Georgia Tech (Fall 2019) taken by Dr. Sham Navathe. The project is an introduction to the MySQL database. A book management/shopping application has been created which allows users to find interesting books and buy them.
