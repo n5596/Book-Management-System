@@ -1,0 +1,103 @@
+<HTML>
+<head>
+<title> Main Page </title>
+</head>
+
+<BODY style="background-image:url('../static/books.jpg');  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+<div style="float:left">
+<form method="POST" action="">
+    <H4>Find Books by Author </H4> 
+    Author <input type = "text" name= "author_name"/> <br>
+    <input type = "submit" name="btn" value="Find Books by Author">
+</form>
+
+<form method="POST" action="">
+    <H4>Find Books by Genre </H4> 
+    Genre <input type = "text" name= "genre_name" /> <br>
+    <input type = "submit" name="btn" value="Find Books by Genre">
+</form>
+
+
+<form method="POST" action="">
+    <H4> Add a Book to your Read Bookshelf </H4> 
+    Book Name <input type = "text" name= "book_name" /> <br>
+    Rating <input type = "text" name= "rating" /> <br>
+    <input type = "submit" name="btn" value="Add a Book to your Read Bookshelf">
+</form>
+
+<form method="POST" action="">
+    <H4>Find Books Read by User </H4>
+    <input type = "submit" name="btn" value="Find Books Read by User">
+</form>
+
+<form method="POST" action="">
+    <H4> Recommend book </H4> 
+    <input type = "submit" name="btn" value="Recommend book">
+</form>
+
+<form method="POST" action="">
+    <H4> Find the Most Critically-Acclaimed Book </H4> 
+    <input type = "submit" name="btn" value="Find the Most Critically-Acclaimed Book">
+</form>
+</div>
+
+<div style="float:right">
+<form method="POST" action="" style="display: inline-block;">
+    <H4> Find highest rated book of author </H4>
+    Author <input type = "text" name= "author_name" /> <br>
+    <input type = "submit" name="btn" value="Find highest rated book of author">
+</form>
+
+<form method="POST" action="">
+    <H4>Find Books Written by Authors Who Have Won a Specific Award </H4> 
+    Author <input type = "text" name= "award_name" /> <br>
+    <input type = "submit" name="btn" value="Find Books Written by Authors Who Have Won a Specific Award">
+</form>
+
+<form method="POST" action="">
+    <H4> Find Book with Maximum Orders </H4> 
+    <input type = "submit" name="btn" value="Find Book with Maximum Orders">
+</form>
+
+<form method="POST" action="">
+    <H4>Find Bookstores Which Carry a Book </H4> 
+    Book Title <input type = "text" name= "title" /> <br>
+    <input type = "submit" name="btn" value="Find Bookstores Which Carry a Book">
+</form>
+
+<form method="POST" action="">
+    <H4> Order a Book </H4> 
+    Book Title <input type = "text" name= "title" /> <br>
+    Number of Copies <input type = "text" name= "copies" /> <br>
+    StoreID <input type = "text" name= "storeid" /> <br>
+    <input type = "submit" name="btn" value="Order a Book">
+</form>
+
+<form method="POST" action="">
+    <H4>Find Books Ordered by User </H4>
+    <input type = "submit" name="btn" value="Find Books Ordered by User">
+</form>
+
+<form method="POST" action="">
+    <H4>Logout </H4>
+    <input type = "submit" name="btn" value="Logout">
+</form>
+</div>
+
+<center>
+<table>
+{% for item in data %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    ...
+</tr>
+{% endfor %}
+</table>
+</center>
+
+</BODY>
+</HTML>

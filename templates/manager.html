@@ -1,0 +1,52 @@
+<HTML>
+<BODY style="background-image:url('../static/books.jpg');  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+
+<div style="float:left;">
+<form method="POST" action="">
+    <H4>Find Books Ordered by User </H4>
+    Username <input type = "text" name= "user_name" /> <br>
+    <input type = "submit" name="btn" value="Find Books Ordered by User">
+</form>
+
+<form method="POST" action="">
+    <H4> Find Orders Made to the Bookstore </H4> 
+    <input type = "submit" name="btn" value="Find Orders Made to the Bookstore">
+</form>
+
+<form method="POST" action="">
+    <H4> See Pending Orders </H4> 
+    <input type = "submit" name="btn" value="See Pending Orders">
+</form>
+
+<form method="POST" action="">
+    <H4> Approve Pending Orders </H4> 
+    SupplyID <input type = "text" name= "id" /> <br>
+    <input type = "submit" name="btn" value="Approve Pending Orders">
+</form>
+
+<form method="POST" action="">
+    <H4> Logout </H4> 
+    <input type = "submit" name="btn" value="Logout">
+</form>
+</div>
+
+<div style="float:right;">
+<table>
+{% for item in data %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    <td>{{item[2]}}</td> 
+    <td>{{item[3]}}</td>
+    <td>{{item[4]}}</td>
+    ...
+</tr>
+{% endfor %}
+</table>
+</div>
+
+</BODY>
+</HTML>

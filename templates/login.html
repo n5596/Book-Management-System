@@ -1,0 +1,48 @@
+<HTML>
+<BODY style="background-image:url('../static/books.jpg');  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;">
+<form method="POST" action="">
+    <center>
+    <H3> Already a user? Login </H3> <br>
+    Username <input type = "text" name= "uname" /> <br>
+    Password <input type = "text" name= "pw" /> <br>
+    <input type = "submit" name="btn" value="Login">
+    </center>
+</form>
+
+<form method="POST" action="">
+    <center>
+    <H3> Sign Up </H3> <br>
+    Username <input type = "text" name= "uname" /> <br>
+    Password <input type = "text" name= "pw" /> <br>
+    Name <input type = "text" name= "name" /> <br>
+    Favorite Genre <input type = "text" name= "genre" /> <br>
+    <input type = "submit" name="btn" value="Sign Up">
+    </center>
+</form>
+
+<form method="POST" action="">
+    <center>
+    <H3> Manager Login </H3> <br>
+    Username <input type = "text" name= "uname" /> <br>
+    Password <input type = "text" name= "pw" /> <br>
+    <input type = "submit" name="btn" value="Manager Login">
+    </center>
+</form>
+
+<center>
+<table>
+{% for item in data %}
+<tr>
+    <td>{{item[0]}}</td>
+    <td>{{item[1]}}</td>
+    ...
+</tr>
+{% endfor %}
+</table>
+</center>
+
+</BODY>
+</HTML>
